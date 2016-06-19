@@ -25,7 +25,7 @@ None
 
 ### ```generate_local```
 
-Creates the specific ```CodecoolClass``` of the students implementing it.
+Creates a ```CodecoolClass``` object having some real-life data from the implementer students' real class.
 
 #### Arguments
 None
