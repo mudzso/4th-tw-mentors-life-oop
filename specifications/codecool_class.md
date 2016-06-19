@@ -36,6 +36,16 @@ None
 
 ## Instance methods
 
+### ```__init__```
+The constructor of the object.
+
+#### Arguments
+
+All of the arguments of the class itself.
+
+#### Return value
+None
+
 ### ```find_student_by_full_name```
 
 Gives back a student with the same full name as the argument from ```students```
