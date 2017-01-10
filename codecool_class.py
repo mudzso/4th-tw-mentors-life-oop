@@ -31,7 +31,8 @@ class CodecoolClass:
                 return self.mentors[i]
         return "Mentor is not found"
 
-
-# cc_b = CodecoolClass.generate_local()
-# print(cc_b.find_student_by_full_name("Eizaburô Atuti"))
-# print(cc_b.find_mentor_by_full_name("Józsi"))
+    def get_student_all_knowledge(self):
+        over_all_knowledge = 0
+        for i in range(len(self.students)):
+            over_all_knowledge += self.students[i].knowledge
+        return over_all_knowledge if over_all_knowledge < 9000 else "Its OVER 9000"
