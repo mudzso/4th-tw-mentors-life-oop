@@ -18,6 +18,17 @@ class CodecoolClass:
         result.students = Student.create_by_csv()
         return result
 
+    def get_student_gender_for_print(self, student, form):
+
+        pronouns = [["he", "she", "it"], ["him", "her", "it"], ["his", "her", "its"]]
+
+        if student == "male":
+            return pronouns[form - 1][0]
+        if student == "female":
+            return pronouns[form - 1][1]
+        if student == "notsure":
+            return pronouns[form - 1][2]
+
     def find_student_by_full_name(self, full_name):
         for i in range(len(self.students)):
             if full_name == self.students[i].first_name + " " + self.students[i].last_name:
