@@ -1,7 +1,7 @@
-from codecool_class import CodeCoolClass
+from codecool_class import CodecoolClass
 from student import Student
+# from test import Test
 import random
-
 
 class Building():
 
@@ -10,7 +10,7 @@ class Building():
         self.is_lounge = False
         self.is_main_room = False
         if room_type == "kitchen":
-            self.iskitchen = True
+            self.is_kitchen = True
         elif room_type == "lounge":
             self.is_lounge = True
         elif room_type == "main_room":
@@ -25,7 +25,7 @@ class Building():
                 student = random.choice(cc_class.students)
                 gender_str = cc_class.get_student_gender_for_print(student, 2)
                 energy = student.energy
-            print("{} drank some coffe and {} energy increased by 10".format(student.name, gender_str))
+            print("{} drank some coffe and {} energy increased by 10".format(student.last_name, gender_str))
         else:
             pass
 
@@ -33,16 +33,15 @@ class Building():
         if self.is_kitchen:
             people_in_kitchen = []
             people = []
-            people.append(cc_class.students)
-            people.append(cc_class.mentor)
+            people= cc_class.students
             number_of_people = random.randint(2, 6)
+            string_to_print = ""
             for i in range(number_of_people):
                 people_in_kitchen.append(random.choice(people))
             for person in people_in_kitchen:
-                if isinstance(person, Student):
-                    person.energy += 5
-                print(person, " and", end=' ')
-            print("had a cup of tea and chat together")
+                person.energy += 5
+                string_to_print += person.first_name + ", "
+            print("{} had a cup of tea and chat together. They also gained 5 energy".format(string_to_print.strip(", ")))
         else:
             pass
 
@@ -51,15 +50,14 @@ class Building():
         if self.is_lounge:
             people_in_lounge = []
             people = []
-            people.append(cc_class.students)
-            people.append(cc_class.mentor)
+            people = cc_class.students
             number_of_people = random.randint(2, 6)
+            string_to_print = ""
             for i in range(number_of_people):
                 people_in_lounge.append(random.choice(people))
             for person in people_in_lounge:
-                if isinstance(person, Student):
-                    person.energy += 10
-                print(person, " and", end=' ')
-            print("played a good game of darts")
+                person.energy += 10
+                string_to_print += person.first_name + ", "
+            print("{} played a good game of darts. They also gained 10 energy.".format(string_to_print.strip(", ")))
         else:
             pass

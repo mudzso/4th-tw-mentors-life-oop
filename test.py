@@ -2,7 +2,7 @@ import random
 from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
-
+from cc_building import Building
 
 class Test:
 
@@ -33,8 +33,11 @@ class Test:
 
         return result
 
-
+faszom = CodecoolClass.generate_local()
 test_1 = Test.organize_test("asd")
 print(test_1.result)
 print(test_1.participants[0].first_name)
 print(test_1.admin.first_name)
+kony = Building("lounge")
+print(kony.is_kitchen)
+kony.play_a_game_of_darts(faszom)
