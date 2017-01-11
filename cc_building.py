@@ -22,7 +22,8 @@ class Building():
             energy = 100
             while energy >= 90:
                 student = random.choice(cc_class.students)
+                gender_str = cc_class.get_student_gender_for_print(student, 2)
                 energy = student.energy
-            print("{} drank some coffe and {} energy increased by 10")
+            print("{} drank some coffe and {} energy increased by 10".format(student.name, gender_str))
         else:
             pass
