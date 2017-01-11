@@ -22,11 +22,11 @@ class CodecoolClass:
 
         pronouns = [["he", "she", "it"], ["him", "her", "it"], ["his", "her", "its"]]
 
-        if student == "male":
+        if student.gender == "male":
             return pronouns[form - 1][0]
-        if student == "female":
+        if student.gender == "female":
             return pronouns[form - 1][1]
-        if student == "notsure":
+        if student.gender == "notsure":
             return pronouns[form - 1][2]
 
     def find_student_by_full_name(self, full_name):
