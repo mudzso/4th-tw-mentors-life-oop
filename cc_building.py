@@ -3,18 +3,16 @@ from student import Student
 # from test import Test
 import random
 
+
 class Building():
 
     def __init__(self, room_type):
         self.is_kitchen = False
         self.is_lounge = False
-        self.is_main_room = False
         if room_type == "kitchen":
             self.is_kitchen = True
         elif room_type == "lounge":
             self.is_lounge = True
-        elif room_type == "main_room":
-            self.is_main_room = True
 
     # Kitchen specific methods
 
@@ -33,7 +31,7 @@ class Building():
         if self.is_kitchen:
             people_in_kitchen = []
             people = []
-            people= cc_class.students
+            people = cc_class.students
             number_of_people = random.randint(2, 6)
             string_to_print = ""
             for i in range(number_of_people):
@@ -75,7 +73,8 @@ class Building():
                 if student_knowledge > 65:
                     student_knowledge = 200
                 else:
-                    print("{} mentor helps {} practice, {} gained 20 knowledge".format(mentor.nickname, student.last_name, cc_class.get_student_gender_for_print(student, 1)))
+                    print("{} mentor helps {} practice, {} gained 20 knowledge".format(
+                        mentor.nickname, student.last_name, cc_class.get_student_gender_for_print(student, 1)))
 
         else:
             pass
