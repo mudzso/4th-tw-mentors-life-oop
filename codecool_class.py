@@ -46,8 +46,8 @@ class CodecoolClass:
         over_all_knowledge = 0
         for i in range(len(self.students)):
 
-            over_all_knowledge += self.students[i].knowledge
-        return over_all_knowledge if over_all_knowledge < 9000 else "Its OVER 9000"
+            overall_knowledge += self.students[i].knowledge
+        return overall_knowledge if overall_knowledge < 9000 else "Its OVER 9000"
 
     def get_student_all_energy(self):
         over_all_energy = 0
