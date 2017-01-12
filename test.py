@@ -1,9 +1,5 @@
 import random
-from codecool_class import CodecoolClass
-from mentor import Mentor
-from student import Student
-from cc_building import Building
-from team import Team
+import story
 
 
 class Test:
@@ -18,11 +14,11 @@ class Test:
         self.failed_students = []
 
     @classmethod
-    def organize_test(cls, name):
+    def organize_test(cls, name, cc_class):
         test = Test()
         test.name = name
-        test.admin = random.choice(CodecoolClass.generate_local().mentors)
-        test.participants = CodecoolClass.generate_local().students
+        test.admin = random.choice(cc_class.mentors)
+        test.participants = cc_class.students
 
         return test
 
@@ -58,26 +54,3 @@ class Test:
             else:
                 temp_list_for_failed.append(student)
         self.failed_students = temp_list_for_failed
-
-    def private_mentoring(participants):
-        if type(participants) == list:
-            for student in participants:
-                student.knowledge += 30
-        else:
-            participants.knowledge += 30
-
-
-faszom = CodecoolClass.generate_local()
-test_1 = Test.organize_test("BFA")
-test_1.grade_test(50, faszom.students)
-print(test_1.result)
-test_1.check_admin_satisfaction()
-Test.private_mentoring(test_1.failed_students)
-print(faszom.students[0].first_name, faszom.students[0].knowledge)
-Test.private_mentoring(faszom.students[0])
-print(faszom.students[0].first_name, faszom.students[0].knowledge)
-test_1.failers_repeat()
-print(test_1.result)
-test_1.check_admin_satisfaction()
-teams = Team.make_teams(4, faszom)
-Team.do_assigment_with_random_teams(teams)
