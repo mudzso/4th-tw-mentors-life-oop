@@ -43,7 +43,7 @@ class CodecoolClass:
         return "Mentor is not found"
 
     def get_student_all_knowledge(self):
-        overall_knowledge = 0
+        over_all_knowledge = 0
         for i in range(len(self.students)):
 
             overall_knowledge += self.students[i].knowledge

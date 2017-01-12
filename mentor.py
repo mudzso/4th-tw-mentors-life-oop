@@ -24,8 +24,8 @@ class Mentor(Person):
             mentor_first_name = mentor[0]
             mentor_last_name = mentor[1]
             mentor_year_of_birth = int(mentor[2])
-            mentor_gender = [3]
-            mentor_nickname = [4]
+            mentor_gender = mentor[3]
+            mentor_nickname = mentor[4]
             mentor_list.append(Mentor(mentor_first_name, mentor_last_name,
                                       mentor_year_of_birth, mentor_gender, mentor_nickname))
 
