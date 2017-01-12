@@ -49,6 +49,7 @@ None
 ### ```find_student_by_full_name```
 
 Gives back a student with the same full name as the argument from ```students```
+
 #### Arguments
 * ```full_name```
   * data_type: string
@@ -59,6 +60,8 @@ Gives back a student with the same full name as the argument from ```students```
 
 ### ```find_mentor_by_full_name```
 
+Gives back a mentor with the same full name as the argument from ```mentors```
+
 #### Arguments
 * ```full_name```
   * data_type: string
@@ -66,3 +69,32 @@ Gives back a student with the same full name as the argument from ```students```
 
 #### Return value
 ```Mentor``` object
+
+### ```get_student_all_energy```
+Reads the list of ```students``` and sums their energy level
+
+#### Arguments
+None
+
+#### Return value
+```over_all_energy``` integer value
+
+### ```get_student_all_knowledge```
+
+Reads the list of ```students``` and sums their energy level
+
+#### Arguments
+None
+
+#### Return value
+```overall_knowledge``` integer value
+
+### ```get_student_gender_for_print```
+Decides on the given student's gender and gives back the desired pronoun for printing purposes
+
+#### Arguments
+```student``` object
+```form``` decider on the type of pronoun
+
+#### Return value
+```pronoun``` string
