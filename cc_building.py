@@ -46,6 +46,7 @@ class Building():
             pass
 
     # Lounge specific methods
+
     def play_a_game_of_darts(self, cc_class):
         if self.is_lounge:
             people_in_lounge = []
@@ -59,5 +60,22 @@ class Building():
                 person.energy += 10
                 string_to_print += person.first_name + ", "
             print("{} played a good game of darts. They also gained 10 energy.".format(string_to_print.strip(", ")))
+        else:
+            pass
+
+    # Mixed methods
+
+    def private_mentoring(self, cc_class):
+        if self.is_kitchen or self.is_lounge:
+            mentor = random.choice(cc_class.mentors)
+            student_knowledge = 200
+            while student_knowledge > 65:
+                student = random.choice(cc_class.students)
+                student_knowledge = student.knowledge
+                if student_knowledge > 65:
+                    student_knowledge = 200
+                else:
+                    print("{} mentor helps {} practice, {} gained 20 knowledge".format(mentor.nickname, student.last_name, cc_class.get_student_gender_for_print(student, 1)))
+
         else:
             pass

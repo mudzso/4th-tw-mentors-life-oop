@@ -1,6 +1,6 @@
 from codecool_class import CodecoolClass
 import random
-
+import story
 
 class Team():
 
@@ -31,7 +31,7 @@ class Team():
         return teams_list
 
     @classmethod
-    def team_knowledge_level(cls, Teams, team_name):
+    def team_knowledge_levels(cls, Teams, team_name):
         knowledge_level = 0
         for team in Teams:
             if team.team_name == team_name:
@@ -39,3 +39,13 @@ class Team():
                     knowledge_level += member.knowledge
                 return "{}:{}".format(team.team_name, knowledge_level)
         return "Not found team"
+
+    @classmethod
+    def do_assigment_with_random_teams(cls, teams):
+        print("The teams were given an assignment")
+        for team in teams:
+            score = Team.team_knowledge_levels(teams, team.team_name)
+            score = score.split(":")
+            score_dict = {score[0]: score[1]}
+            for k, v in score_dict.items():
+                print("{} achieved {} points based on their average knowledge".format(k, int(v) // len(team.team)))
