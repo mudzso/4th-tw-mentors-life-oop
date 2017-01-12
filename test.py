@@ -1,5 +1,4 @@
 import random
-import story
 
 
 class Test:
@@ -60,5 +59,5 @@ class Test:
             knowledge_increase = random.randint(40, 60)
             student.knowledge += knowledge_increase
             private_mentor = random.choice(cc_class.mentors)
-            'The knowledge of {} increased by {}, because of the private mentoring of {}'.format(student.first_name, knowledge_increase, private_mentor)
-            
+            print('The knowledge of {} increased by {}, because of the private mentoring of {}'.format(
+                student.first_name, knowledge_increase, private_mentor.nickname))

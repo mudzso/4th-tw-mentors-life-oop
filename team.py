@@ -1,6 +1,6 @@
 from codecool_class import CodecoolClass
 import random
-import story
+
 
 class Team():
 
