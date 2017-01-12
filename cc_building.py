@@ -1,6 +1,5 @@
 from codecool_class import CodecoolClass
 from student import Student
-# from test import Test
 import random
 
 
