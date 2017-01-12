@@ -3,6 +3,7 @@ from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
 from cc_building import Building
+from team import Team
 
 
 class Test:
@@ -66,7 +67,6 @@ class Test:
             participants.knowledge += 30
 
 
-
 faszom = CodecoolClass.generate_local()
 test_1 = Test.organize_test("BFA")
 test_1.grade_test(50, faszom.students)
@@ -79,3 +79,5 @@ print(faszom.students[0].first_name, faszom.students[0].knowledge)
 test_1.failers_repeat()
 print(test_1.result)
 test_1.check_admin_satisfaction()
+teams = Team.make_teams(4, faszom)
+Team.do_assigment_with_random_teams(teams)
