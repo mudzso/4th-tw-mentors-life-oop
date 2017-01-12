@@ -54,3 +54,11 @@ class Test:
             else:
                 temp_list_for_failed.append(student)
         self.failed_students = temp_list_for_failed
+
+    def failers_get_private_mentoring(self, failed_students, cc_class):
+        for student in failed_students:
+            knowledge_increase = random.randint(40, 60)
+            student.knowledge += knowledge_increase
+            private_mentor = random.choice(cc_class.mentors)
+            'The knowledge of {} increased by {}, because of the private mentoring of {}'.format(student.first_name, knowledge_increase, private_mentor)
+            
