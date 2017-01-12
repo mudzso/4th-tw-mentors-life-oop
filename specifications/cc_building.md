@@ -26,11 +26,17 @@ A random student goes to the kitchen and drinks coffe, charging their energy.
 #### arguments
 ```CodecoolClass``` object
 
+#### Return value
+None
+
 ### ``` drink_tea_and_chat```
 Some random students have a traditional Japanese relaxing tea and a friendly chat in the kitchen, charging their energy
 
 #### arguments
 ```CodecoolClass``` object
+
+#### Return value
+None
 
 ### ```play_a_game_of_darts```
 Some 2 to 6 random students go to the lounge for a good game of darts, for relaxing purposes
@@ -38,8 +44,14 @@ Some 2 to 6 random students go to the lounge for a good game of darts, for relax
 #### arguments
 ```CodecoolClass``` object
 
+#### Return value
+None
+
 ### ```private_mentoring```
 One Random student (whose knowledge is below 65) asks a mentr to help them. The student's knowledge level increases significantly
 
 #### arguments
 ```CodecoolClass``` object
+
+#### Return value
+None
