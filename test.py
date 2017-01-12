@@ -3,6 +3,7 @@ from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
 from cc_building import Building
+from team import Team
 
 
 class Test:
