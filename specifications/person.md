@@ -1,6 +1,7 @@
 # Person
 
 ## Description
+This class repressent a person itself.
 
 ## Parent class
 None
