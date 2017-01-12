@@ -36,6 +36,6 @@ class Team():
         for team in Teams:
             if team.team_name == team_name:
                 for member in team.team:
-                    knowledge_level = member.knowledge
+                    knowledge_level += member.knowledge
                 return "{}:{}".format(team.team_name, knowledge_level)
         return "Not found team"
